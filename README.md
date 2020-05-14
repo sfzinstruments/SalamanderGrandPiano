@@ -1,5 +1,7 @@
 # Salamander Grand Piano v3
 
+Author: Alexander Holm
+
 ## Description
 
 Recorded @ 48khz24bit
