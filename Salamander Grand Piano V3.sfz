@@ -1,0 +1,89 @@
+// --------------------------------------
+// SFZ format v2 with ARIA extensions
+// --------------------------------------
+// Salamander Grand Piano V3
+// Yamaha C5
+// Author: Alexander Holm
+// Retuned version by Markus Fiedler
+// --------------------------------------
+// reconstructed by kinwie
+// --------------------------------------
+
+
+//midi cc
+#define $STR_RES 20
+#define $HAMMER 21
+#define $PEDAL 22
+#define $SUS_PED 64
+#define $RELEASE 72
+#define $VELTRACK 99
+
+//sustain pedal range
+#define $SUS_UP 1
+#define $SUS_DN 126
+
+//keyswitch
+#define $NATURAL C0
+#define $RETUNED C#0
+
+//file extension
+#define $EXT flac
+
+
+////////////////////////////////////////
+<control>
+default_path=Samples/
+
+label_cc$STR_RES=String Res ($STR_RES)
+label_cc$HAMMER=Hammer Noise ($HAMMER)
+label_cc$PEDAL=Pedal Noise ($PEDAL)
+label_cc$SUS_PED=Sus Pedal ($SUS_PED)
+label_cc$RELEASE=Release ($RELEASE)
+label_cc$VELTRACK=Veltrack ($VELTRACK)
+
+set_hdcc$STR_RES=0.5
+set_hdcc$HAMMER=0.5
+set_hdcc$PEDAL=0.5
+set_hdcc$RELEASE=0.5
+set_hdcc$VELTRACK=0.73
+
+
+//========================
+<global>
+amp_veltrack=0
+amp_veltrack_oncc$VELTRACK=100
+ampeg_release_oncc$RELEASE=2
+sw_lokey=$NATURAL
+sw_hikey=$RETUNED
+sw_default=$NATURAL
+
+<master>
+sw_last=$NATURAL
+sw_label=Natural
+#include "Data/tune_nat.txt"
+#include "Data/notes.txt"
+
+<master>
+sw_last=$RETUNED
+sw_label=Retuned
+#include "Data/tune_ret.txt"
+#include "Data/notes.txt"
+
+
+//========================
+<global>
+trigger=release
+
+<master>
+amplitude_oncc$STR_RES=200
+#include "Data/str_res.txt"
+
+<master>
+amplitude_oncc$HAMMER=200
+#include "Data/hammer.txt"
+
+
+//========================
+<global>
+amplitude_oncc$PEDAL=200
+#include "Data/pedal.txt"
