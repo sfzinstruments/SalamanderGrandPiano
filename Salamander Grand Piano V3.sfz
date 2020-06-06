@@ -80,16 +80,19 @@ sw_label=Retuned
 trigger=release
 
 <master>
+locc$STR_RES=1
 amplitude_oncc$STR_RES=200
 #include "Data/str_res.txt"
 
 <master>
+locc$HAMMER=1
 amplitude_oncc$HAMMER=200
 #include "Data/hammer.txt"
 
 
 //========================
 <global>
+locc$PEDAL=1
 amplitude_oncc$PEDAL=200
 #include "Data/pedal.txt"
 
