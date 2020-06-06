@@ -12,9 +12,11 @@ Two AKG c414 disposed in an AB position ~12cm above the strings.
 
 Source: <https://archive.org/details/SalamanderGrandPianoV3>
 
-Mapped by kinwie using sfz format v2 with ARIA extensions in flac format,
+Remapped by kinwie using sfz format v2 with ARIA extensions in flac format,
 combined the Natural and Retuned version into 1 single sfz,
 selectable using keyswitch.
+
+Additional adjustable sample start (offset) from Jeff Learman settings for optional faster response.
 
 ## License
 
