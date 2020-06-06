@@ -16,6 +16,7 @@
 #define $PEDAL 22
 #define $SUS_PED 64
 #define $RELEASE 72
+#define $OFFSET 98
 #define $VELTRACK 99
 
 //sustain pedal range
@@ -39,12 +40,14 @@ label_cc$HAMMER=Hammer Noise ($HAMMER)
 label_cc$PEDAL=Pedal Noise ($PEDAL)
 label_cc$SUS_PED=Sus Pedal ($SUS_PED)
 label_cc$RELEASE=Release ($RELEASE)
+label_cc$OFFSET=Offset ($OFFSET)
 label_cc$VELTRACK=Veltrack ($VELTRACK)
 
 set_hdcc$STR_RES=0.5
 set_hdcc$HAMMER=0.5
 set_hdcc$PEDAL=0.5
 set_hdcc$RELEASE=0.5
+set_hdcc$OFFSET=0
 set_hdcc$VELTRACK=0.73
 
 
@@ -53,6 +56,8 @@ set_hdcc$VELTRACK=0.73
 amp_veltrack=0
 amp_veltrack_oncc$VELTRACK=100
 ampeg_release_oncc$RELEASE=2
+ampeg_attack_oncc$OFFSET=0.001
+ampeg_attack_curvecc$OFFSET=7
 sw_lokey=$NATURAL
 sw_hikey=$RETUNED
 sw_default=$NATURAL
@@ -87,3 +92,11 @@ amplitude_oncc$HAMMER=200
 <global>
 amplitude_oncc$PEDAL=200
 #include "Data/pedal.txt"
+
+
+//--------------------------------------
+<curve>
+curve_index=7
+v000=0
+v001=1
+v127=1
