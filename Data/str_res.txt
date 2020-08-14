@@ -1,4 +1,5 @@
 master_label=Release string resonances
+group=4
 
 //========================
 <group> group_label=harmL volume=-4 amp_veltrack=94 rt_decay=6 lovel=45
@@ -61,7 +62,7 @@ master_label=Release string resonances
 <region> region_label=23 lokey=86 hikey=88 pitch_keycenter=87 sample=harmSD#6.$EXT
 
 //========================
-<group> group_label=harmV3 amp_veltrack=96 rt_decay=2
+<group> group_label=harmV3 amp_veltrack=96 rt_decay=2 group=5
 <region> region_label=01 lokey=21 hikey=22 pitch_keycenter=21 sample=harmV3A0.$EXT
 <region> region_label=02 lokey=23 hikey=25 pitch_keycenter=24 sample=harmV3C1.$EXT
 <region> region_label=03 lokey=26 hikey=28 pitch_keycenter=27 sample=harmV3D#1.$EXT
