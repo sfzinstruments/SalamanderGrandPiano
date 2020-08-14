@@ -58,6 +58,8 @@ amp_veltrack_oncc$VELTRACK=100
 ampeg_release_oncc$RELEASE=2
 ampeg_attack_oncc$OFFSET=0.001
 ampeg_attack_curvecc$OFFSET=7
+note_polyphony=1
+off_time=0.5
 sw_lokey=$NATURAL
 sw_hikey=$RETUNED
 sw_default=$NATURAL
@@ -78,6 +80,8 @@ sw_label=Retuned
 //========================
 <global>
 trigger=release
+note_polyphony=1
+off_time=0.5
 
 <master>
 locc$STR_RES=1
