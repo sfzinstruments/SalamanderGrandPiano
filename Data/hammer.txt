@@ -5,8 +5,6 @@ group_label=rel
 amp_veltrack=82
 volume=-37
 rt_decay=2
-group=3
-polyphony=1
 
 <region> region_label=01 key=21 sample=rel1.$EXT
 <region> region_label=02 key=22 sample=rel2.$EXT
