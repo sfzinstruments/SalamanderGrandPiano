@@ -35,13 +35,13 @@
 <control>
 default_path=Samples/
 
-label_cc$STR_RES=String Res ($STR_RES)
-label_cc$HAMMER=Hammer Noise ($HAMMER)
-label_cc$PEDAL=Pedal Noise ($PEDAL)
-label_cc$SUS_PED=Sus Pedal ($SUS_PED)
-label_cc$RELEASE=Release ($RELEASE)
-label_cc$OFFSET=Offset ($OFFSET)
-label_cc$VELTRACK=Veltrack ($VELTRACK)
+label_cc$STR_RES=String Res
+label_cc$HAMMER=Hammer Noise
+label_cc$PEDAL=Pedal Noise
+label_cc$SUS_PED=Sus Pedal
+label_cc$RELEASE=Release
+label_cc$OFFSET=Offset
+label_cc$VELTRACK=Veltrack
 
 set_hdcc$STR_RES=0.5
 set_hdcc$HAMMER=0.5
