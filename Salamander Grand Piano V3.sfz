@@ -35,6 +35,8 @@
 <control>
 default_path=Samples/
 
+label_cc7=Vol
+label_cc10=Pan
 label_cc$STR_RES=String Res
 label_cc$HAMMER=Hammer Noise
 label_cc$PEDAL=Pedal Noise
@@ -43,6 +45,8 @@ label_cc$RELEASE=Release
 label_cc$OFFSET=Offset
 label_cc$VELTRACK=Veltrack
 
+set_cc7=100
+set_hdcc10=0.5
 set_hdcc$STR_RES=0.5
 set_hdcc$HAMMER=0.5
 set_hdcc$PEDAL=0.5
@@ -53,6 +57,10 @@ set_hdcc$VELTRACK=0.73
 
 //========================
 <global>
+amplitude_oncc7=100
+amplitude_curvecc7=4
+pan_oncc10=100
+pan_curvecc10=1
 amp_veltrack=0
 amp_veltrack_oncc$VELTRACK=100
 ampeg_release_oncc$RELEASE=2
@@ -79,6 +87,10 @@ sw_label=Retuned
 
 //========================
 <global>
+amplitude_oncc7=100
+amplitude_curvecc7=4
+pan_oncc10=100
+pan_curvecc10=1
 trigger=release
 note_polyphony=1
 off_time=0.5
@@ -96,6 +108,10 @@ amplitude_oncc$HAMMER=200
 
 //========================
 <global>
+amplitude_oncc7=100
+amplitude_curvecc7=4
+pan_oncc10=100
+pan_curvecc10=1
 locc$PEDAL=1
 amplitude_oncc$PEDAL=200
 #include "Data/pedal.txt"
