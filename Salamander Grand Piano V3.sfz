@@ -14,14 +14,9 @@
 #define $STR_RES 20
 #define $HAMMER 21
 #define $PEDAL 22
-#define $SUS_PED 64
 #define $RELEASE 72
 #define $OFFSET 98
 #define $VELTRACK 99
-
-//sustain pedal range
-#define $SUS_UP 1
-#define $SUS_DN 126
 
 //keyswitch
 #define $NATURAL C0
@@ -37,10 +32,10 @@ default_path=Samples/
 
 label_cc7=Vol
 label_cc10=Pan
+label_cc64=Sus Pedal
 label_cc$STR_RES=String Res
 label_cc$HAMMER=Hammer Noise
 label_cc$PEDAL=Pedal Noise
-label_cc$SUS_PED=Sus Pedal
 label_cc$RELEASE=Release
 label_cc$OFFSET=Offset
 label_cc$VELTRACK=Veltrack
@@ -61,8 +56,8 @@ amplitude_oncc7=100
 amplitude_curvecc7=4
 pan_oncc10=100
 pan_curvecc10=1
-amp_veltrack=0
-amp_veltrack_oncc$VELTRACK=100
+amp_veltrack_oncc$VELTRACK=-100
+amp_veltrack_curvecc$VELTRACK=2
 ampeg_release_oncc$RELEASE=2
 ampeg_attack_oncc$OFFSET=0.001
 ampeg_attack_curvecc$OFFSET=7
