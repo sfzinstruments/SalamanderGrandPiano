@@ -44,7 +44,7 @@ jobs:
           asset_name: plugins.json
           asset_content_type: application/json
 
-      - name: Upload audio
+      - name: Upload audio preview
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -54,7 +54,7 @@ jobs:
           asset_name: ${{ github.event.repository.name }}.flac
           asset_content_type: audio/flac
 
-      - name: Upload image
+      - name: Upload image preview
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -64,10 +64,10 @@ jobs:
           asset_name: ${{ github.event.repository.name }}.jpg
           asset_content_type: image/jpeg
 
-      - name: Compress assets
+      - name: Compress lossless version
         run: zip -r ./${{ github.event.repository.name }}.zip *
 
-      - name: Upload assets
+      - name: Upload lossless version
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -75,6 +75,26 @@ jobs:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
           asset_path: ./${{ github.event.repository.name }}.zip
           asset_name: ${{ github.event.repository.name }}.zip
+          asset_content_type: application/zip
+
+      - name: Create lossy version
+        uses: FedericoCarboni/setup-ffmpeg@v1
+        run: |
+          for i in ./Samples/*.flac; do ffmpeg -i "$i" -b:a 128k "${i%.*}.ogg"; done
+          sed -i '' 's/flac/ogg/g' 'Salamander Grand Piano V3.sfz'
+          find . -name "*.flac" -type f -delete
+
+      - name: Compress lossy version
+        run: zip -r ./${{ github.event.repository.name }}-lossy.zip *
+
+      - name: Upload lossy version
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: ./${{ github.event.repository.name }}-lossy.zip
+          asset_name: ${{ github.event.repository.name }}-lossy.zip
           asset_content_type: application/zip
 
       - name: Publish release
