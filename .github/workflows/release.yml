@@ -77,8 +77,10 @@ jobs:
           asset_name: ${{ github.event.repository.name }}.zip
           asset_content_type: application/zip
 
-      - name: Create lossy version
+      - name: Install ffmpeg
         uses: FedericoCarboni/setup-ffmpeg@v1
+
+      - name: Create lossy version
         run: |
           for i in ./Samples/*.flac; do ffmpeg -i "$i" -b:a 128k "${i%.*}.ogg"; done
           sed -i '' 's/flac/ogg/g' 'Salamander Grand Piano V3.sfz'
