@@ -83,7 +83,7 @@ jobs:
       - name: Create lossy version
         run: |
           for i in ./Samples/*.flac; do ffmpeg -i "$i" -b:a 128k "${i%.*}.ogg"; done
-          sed -i '' 's/flac/ogg/g' 'Salamander Grand Piano V3.sfz'
+          sed -i 's/flac/ogg/g' 'Salamander Grand Piano V3.sfz'
           find . -name "*.flac" -type f -delete
 
       - name: Compress lossy version
