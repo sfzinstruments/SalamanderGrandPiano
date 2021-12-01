@@ -85,6 +85,7 @@ jobs:
           for i in ./Samples/*.flac; do ffmpeg -i "$i" -b:a 128k "${i%.*}.ogg"; done
           sed -i 's/flac/ogg/g' 'Salamander Grand Piano V3.sfz'
           find . -name "*.flac" -type f -delete
+          rm salamander-grand-piano.zip
 
       - name: Compress lossy version
         run: zip -r ./${{ github.event.repository.name }}-lossy.zip *
