@@ -50,8 +50,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./${{ github.event.repository.name }}.flac
-          asset_name: ${{ github.event.repository.name }}.flac
+          asset_path: ./salamander-grand-piano.flac
+          asset_name: salamander-grand-piano.flac
           asset_content_type: audio/flac
 
       - name: Upload image preview
@@ -60,12 +60,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./${{ github.event.repository.name }}.jpg
-          asset_name: ${{ github.event.repository.name }}.jpg
+          asset_path: ./salamander-grand-piano.jpg
+          asset_name: salamander-grand-piano.jpg
           asset_content_type: image/jpeg
 
       - name: Compress lossless version
-        run: zip -r ./${{ github.event.repository.name }}.zip *
+        run: zip -r ./salamander-grand-piano.zip *
 
       - name: Upload lossless version
         uses: actions/upload-release-asset@v1
@@ -73,8 +73,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./${{ github.event.repository.name }}.zip
-          asset_name: ${{ github.event.repository.name }}.zip
+          asset_path: ./salamander-grand-piano.zip
+          asset_name: salamander-grand-piano.zip
           asset_content_type: application/zip
 
       - name: Install ffmpeg
@@ -88,7 +88,7 @@ jobs:
           rm salamander-grand-piano.zip
 
       - name: Compress lossy version
-        run: zip -r ./${{ github.event.repository.name }}-lossy.zip *
+        run: zip -r ./salamander-grand-piano-lossy.zip *
 
       - name: Upload lossy version
         uses: actions/upload-release-asset@v1
@@ -96,8 +96,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./${{ github.event.repository.name }}-lossy.zip
-          asset_name: ${{ github.event.repository.name }}-lossy.zip
+          asset_path: ./salamander-grand-piano-lossy.zip
+          asset_name: salamander-grand-piano-lossy.zip
           asset_content_type: application/zip
 
       - name: Publish release
