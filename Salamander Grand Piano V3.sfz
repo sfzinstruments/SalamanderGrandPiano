@@ -28,7 +28,6 @@
 
 ////////////////////////////////////////
 <control>
-image=GUI/background.png
 default_path=Samples/
 
 label_cc7=Vol
