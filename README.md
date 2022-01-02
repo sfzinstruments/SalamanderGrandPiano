@@ -16,6 +16,8 @@ Remapped by kinwie using sfz format v2 with ARIA extensions in flac format,
 combined the Natural and Retuned version into 1 single sfz,
 selectable using keyswitch.
 
+Audio demo : https://sfzinstruments.github.io/pianos/salamander
+
 ## Compatibility Notes
 
 This SFZ Instrument is reconstructed with the heavily use of SFZ specification level 2.0 + ARIA Extensions. With this is mind, this Salamander Grand Piano will only played properly in Plogue sforzando and similar sfz samplers that used ARIA Engine. Trying to play this instrument in other than ARIA-based sfz samplers may cause issues and problems if it doesn't support the opcodes superset used in this sfz instrument. If ARIA-based sfz sampler is not your choice, we advised you to choose a sfz sampler that has similar level of opcodes support for this instrument can be played and sounded as it should.
