@@ -30,6 +30,12 @@ This SFZ Instrument is reconstructed with the heavily use of SFZ specification l
 - Offset : Sample start for faster touch response
 - Veltrack : Dynamic range / velocity to volume response
 
+## Improvements and Features
+
+- This piano has the note-selfmasking sfz native feature and polyphony optimized. This means, when playing a lot of notes (e.g. repetitive, trills or sustain pedal down), the voices count will be handled effectively and lower, which also means less jumping in CPU usage and results in more natural piano sound behavior.
+
+- When not used, lowering the String Res, Hammer Noise and Pedal Noise to 0% also disabling those layers which means free up their polyphony usage and lowering voice count, so lesser CPU and RAM usage.
+
 ## Usage Tips
 
 - Salamander Grand Piano sets its default amp_veltrack value at 73%. This mean playing softly (low velocity) will result at higher volume than usual. Setting this veltrack value to achieve a pleasant dynamic range that suit you also depend on your playing style and your keyboard/MIDI controller touch response. Try increase and decrease this "Veltrack" parameter as you play and feel the suitable one for you. To change the default value permanently, find this line in the sfz file : `set_hdcc$VELTRACK=0.73` and change the value to the one you that wanted, range from 0 to 1.
