@@ -18,7 +18,23 @@ selectable using keyswitch.
 
 ## Compatibility Notes
 
-This SFZ Instruments is reconstructed with the heavily use of SFZ specification level 2.0 + ARIA Extensions. With this is mind, this Salamander Grand Piano will only played properly in Plogue sforzando and similar sfz samplers that used ARIA Engine. Trying to play this instrument in other than ARIA-based sfz samplers may cause issues and problems if it doesn't support the opcodes superset used in this sfz instrument. If ARIA-based sfz sampler is not your choice, we advised you to choose a sfz sampler that has similar level of opcodes support for this instrument can be played and sounded as it should.
+This SFZ Instrument is reconstructed with the heavily use of SFZ specification level 2.0 + ARIA Extensions. With this is mind, this Salamander Grand Piano will only played properly in Plogue sforzando and similar sfz samplers that used ARIA Engine. Trying to play this instrument in other than ARIA-based sfz samplers may cause issues and problems if it doesn't support the opcodes superset used in this sfz instrument. If ARIA-based sfz sampler is not your choice, we advised you to choose a sfz sampler that has similar level of opcodes support for this instrument can be played and sounded as it should.
+
+## Control Details
+
+- String Res : Volume of the string resonance
+- Hammer Noise : Volume of the key-release noise
+- Pedal Noise : Volume of the pedal noise (on the sustain pedal)
+- Sus Pedal : Sustain pedal position (up-down)
+- Release : Release time for the sustain layers
+- Offset : Sample start for faster touch response
+- Veltrack : Dynamic range / velocity to volume response
+
+## Usage Tips
+
+- Salamander Grand Piano sets its default amp_veltrack value at 73%. This mean playing softly (low velocity) will result at higher volume than usual. Setting this veltrack value to achieve a pleasant dynamic range that suit you also depend on your playing style and your keyboard/MIDI controller touch response. Try increase and decrease this "Veltrack" parameter as you play and feel the suitable one for you. To change the default value permanently, find this line in the sfz file : `set_hdcc$VELTRACK=0.73` and change the value to the one you that wanted, range from 0 to 1.
+
+- MIDI CC numbers are assigned at the top of the sfz file with the #define macro. They can be easily changed to your personal favor or to match your MIDI controller device setup. After loading the instrument in sforzando, click the "Open In Text Editor" blue botton at the INFO page, the sfz file will open by your default text editor. You will see a list of parameter's defined numbers. Change the number to your preference and then save it (e.g. Ctrl+S in WinOS), the CC numbers are updated to new ones. This is a handy feature in sfz and is a bit similar to MIDI Learn function.
 
 ## Update Log
 
