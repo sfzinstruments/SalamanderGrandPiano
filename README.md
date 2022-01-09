@@ -6,7 +6,7 @@ Author: Alexander Holm
 
 Recorded @ 48khz24bit
 16 Velocity layers Sampled in minor thirds from the lowest A.
-Hammer noise releases chromatically sampled in onle one layer.
+Hammer noise releases chromatically sampled in one layer.
 String resonance releases in minor thirds in three layers.
 Two AKG c414 disposed in an AB position ~12cm above the strings.
 
