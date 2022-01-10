@@ -1,0 +1,41 @@
+{
+  "plugins": [
+    {
+      "author": "Alexander Holm",
+      "homepage": "https://github.com/sfzinstruments/SalamanderGrandPiano/",
+      "name": "Salamander Grand Piano",
+      "description": "Yamaha C5, recorded with two AKG c414 disposed in an AB position ~12cm above the strings.",
+      "tags": [
+        "Samples",
+        "Piano",
+        "Yamaha",
+        "sfz"
+      ],
+      "version": "3.0.0",
+      "id": "salamander-grand-piano",
+      "date": "2021-09-20T07:00:00.000Z",
+      "files": {
+        "audio": {
+          "name": "salamander-grand-piano.flac",
+          "size": 365662
+        },
+        "image": {
+          "name": "salamander-grand-piano.jpg",
+          "size": 88748
+        },
+        "linux": {
+          "name": "salamander-grand-piano.zip",
+          "size": 748416023
+        },
+        "mac": {
+          "name": "salamander-grand-piano.zip",
+          "size": 748416023
+        },
+        "win": {
+          "name": "salamander-grand-piano.zip",
+          "size": 748416023
+        }
+      }
+    }
+  ]
+}
